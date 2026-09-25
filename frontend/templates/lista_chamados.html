@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Chamados</h1>
+</div>
+
+<div class="filters-bar">
+    <button class="filter-btn active">Todos</button>
+    <button class="filter-btn">Em andamento</button>
+    <button class="filter-btn">Resolvidos</button>
+    <button class="filter-btn">Pendentes</button>
+</div>
+
+<div class="filters-bar">
+    <input type="text" class="search-input" placeholder="Buscar por descrição, sala ou nome...">
+    <button class="btn btn-outline">Filtrar</button>
+</div>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Descrição</th>
+                <th>Sala</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dados estáticos para visualização do frontend -->
+            <tr>
+                <td>0042</td>
+                <td>Computador não liga</td>
+                <td>Laboratório 1</td>
+                <td><span class="status-badge status-andamento">Em andamento</span></td>
+                <td><button class="btn btn-outline">Atribuir</button></td>
+            </tr>
+            <tr>
+                <td>0041</td>
+                <td>Impressora sem conexão</td>
+                <td>Sala 203</td>
+                <td><span class="status-badge status-andamento">Em andamento</span></td>
+                <td><button class="btn btn-outline">Atribuir</button></td>
+            </tr>
+            <tr>
+                <td>0040</td>
+                <td>Projetor não funciona</td>
+                <td>Sala 101</td>
+                <td><span class="status-badge status-pendente">Pendente</span></td>
+                <td><button class="btn btn-outline">Atribuir</button></td>
+            </tr>
+            <tr>
+                <td>0039</td>
+                <td>Rede instável</td>
+                <td>Laboratório 2</td>
+                <td><span class="status-badge status-andamento">Em andamento</span></td>
+                <td><button class="btn btn-outline">Atribuir</button></td>
+            </tr>
+            <tr>
+                <td>0038</td>
+                <td>Mouse com defeito</td>
+                <td>Sala 204</td>
+                <td><span class="status-badge status-resolvido">Resolvido</span></td>
+                <td><button class="btn btn-outline">Atribuir</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

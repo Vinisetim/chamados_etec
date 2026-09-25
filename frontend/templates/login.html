@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ETEC Suporte Técnico</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="login-body">
+    
+    <div class="login-container">
+        <div class="login-header">
+            <h2>ETEC Suporte Técnico</h2>
+            <p>Faça login para acessar o sistema</p>
+        </div>
+        
+        <!-- Formulário falso apenas para navegação no frontend -->
+        <form action="{{ url_for('main.lista_chamados') }}" method="GET">
+            <div class="form-group">
+                <label for="email">E-mail Institucional</label>
+                <input type="email" id="email" class="form-control" placeholder="nome@etec.sp.gov.br" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Entrar</button>
+        </form>
+    </div>
+
+</body>
+</html>

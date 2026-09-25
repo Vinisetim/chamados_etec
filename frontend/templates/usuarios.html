@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header" style="display: flex; justify-content: space-between; align-items: center;">
+    <div>
+        <h1>Gestão de Usuários</h1>
+        <p style="color: var(--text-muted); margin-top: 5px;">Cadastre e gerencie logins de professores e técnicos.</p>
+    </div>
+    <button class="btn btn-primary" onclick="alert('Abrir modal de novo usuário (Mock)')">+ Novo Usuário</button>
+</div>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>E-mail (Login)</th>
+                <th>Perfil</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Carlos Souza</td>
+                <td>carlos.souza@etec.sp.gov.br</td>
+                <td>Técnico-Adm</td>
+                <td>
+                    <button class="btn btn-outline" style="padding: 4px 8px; font-size: 0.8rem;">Editar</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Maria Aparecida</td>
+                <td>maria.aparecida@etec.sp.gov.br</td>
+                <td>Professor</td>
+                <td>
+                    <button class="btn btn-outline" style="padding: 4px 8px; font-size: 0.8rem;">Editar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

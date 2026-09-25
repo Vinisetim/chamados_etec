@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Meus Chamados Atribuídos</h1>
+    <p style="color: var(--text-muted); margin-top: 5px;">Gerencie os chamados sob sua responsabilidade</p>
+</div>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Descrição</th>
+                <th>Sala</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0042</td>
+                <td>Computador não liga</td>
+                <td>Laboratório 1</td>
+                <td><span class="status-badge status-andamento">Em andamento</span></td>
+                <td><button class="btn btn-primary">Finalizar</button></td>
+            </tr>
+            <tr>
+                <td>0039</td>
+                <td>Rede instável</td>
+                <td>Laboratório 2</td>
+                <td><span class="status-badge status-andamento">Em andamento</span></td>
+                <td><button class="btn btn-primary">Finalizar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETEC Suporte Técnico</title>
+    <!-- Link para o CSS base -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    
+    <!-- Sidebar comum a (quase) todas as páginas -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="{{ url_for('main.login') }}" style="text-decoration: none; color: inherit;">
+                <h2>ETEC</h2>
+                <p>Suporte Técnico</p>
+            </a>
+        </div>
+
+        <nav class="sidebar-nav">
+            <!-- Em Jinja2, usamos lógica simples para definir a aba ativa usando request.endpoint -->
+            <a href="{{ url_for('main.lista_chamados') }}" class="nav-item {% if request.endpoint == 'main.lista_chamados' %}active{% endif %}">Chamados</a>
+            <a href="{{ url_for('main.meus_chamados') }}" class="nav-item {% if request.endpoint == 'main.meus_chamados' %}active{% endif %}">Meus Chamados</a>
+            <a href="{{ url_for('main.criar_chamado') }}" class="nav-item {% if request.endpoint == 'main.criar_chamado' %}active{% endif %}">Criar Chamado</a>
+            <a href="{{ url_for('main.usuarios') }}" class="nav-item {% if request.endpoint == 'main.usuarios' %}active{% endif %}">Usuários</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-avatar">CS</div>
+            <div class="user-info">
+                <strong>Carlos Souza</strong>
+                <span>Técnico</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Conteúdo principal dinâmico -->
+    <main class="main-content">
+        <!-- Bloco que será substituído pelas outras páginas HTML -->
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>
